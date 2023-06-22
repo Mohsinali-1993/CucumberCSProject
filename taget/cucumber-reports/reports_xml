@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="21.521">
+    <testcase classname="Login" name="Successful Login with valid Credentials" time="11.253">
+        <system-out><![CDATA[Given User Launch Chrome browser............................................passed
+When User Opens URL "https://admin-demo.nopcommerce.com/login"..............passed
+And User enters Email as "admin@yourstore.com" and Password as "admin"......passed
+And Click on Login..........................................................passed
+Then Page title should be "Dashboard / nopCommerce administration"..........passed
+When User click on Log out Link.............................................passed
+And Close Browser...........................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Login" name="Successful Login with valid Credentials Data Driven Testing" time="6.978">
+        <system-out><![CDATA[Given User Launch Chrome browser............................................passed
+When User Opens URL "https://admin-demo.nopcommerce.com/login"..............passed
+And User enters Email as "admin@yourstore.com" and Password as "admin"......passed
+And Click on Login..........................................................passed
+Then Page title should be "Dashboard / nopCommerce administration"..........passed
+When User click on Log out Link.............................................passed
+And Close Browser...........................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Login" name="Successful Login with valid Credentials Data Driven Testing 2" time="3.076">
+        <failure message="" type="java.lang.AssertionError"><![CDATA[Given User Launch Chrome browser............................................passed
+When User Opens URL "https://admin-demo.nopcommerce.com/login"..............passed
+And User enters Email as "test@yourstore.com" and Password as "admin".......passed
+And Click on Login..........................................................passed
+Then Page title should be "Dashboard / nopCommerce administration"..........failed
+When User click on Log out Link.............................................skipped
+And Close Browser...........................................................skipped
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at StepDefinition.StepDef.page_title_should_be(StepDef.java:49)
+	at ✽.Page title should be "Dashboard / nopCommerce administration"(file:///D:/Selenium/CucumberCodeStudio/./Features/LoginFeature.feature:17)
+]]></failure>
+    </testcase>
+</testsuite>
